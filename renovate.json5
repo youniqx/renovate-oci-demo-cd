@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/regnovate-schema.json",
+  "dependencyDashboard": true,
+  "argocd": {
+    "fileMatch": ["application-.*\\.ya?ml$"]
+  }
+}

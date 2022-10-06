@@ -1,0 +1,19 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: renovate-oci-demo
+spec:
+  project: default
+  source:
+    chart: renovate-oci-demo
+    # WARNING: This currently doesn't work when deployed with ArgoCD
+    repoURL: oci://gcr.io/renovate-oci-demo/chart
+    targetRevision: 1.0.0
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: renovate-oci-demo
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
