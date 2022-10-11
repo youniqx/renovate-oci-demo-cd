@@ -8,7 +8,7 @@ spec:
   source:
     chart: renovate-oci-demo
     repoURL: gcr.io/renovate-oci-demo/chart
-    targetRevision: 1.0.0
+    targetRevision: 2.0.0
   destination:
     server: "https://kubernetes.default.svc"
     namespace: renovate-oci-demo
